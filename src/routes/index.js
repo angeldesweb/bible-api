@@ -1,9 +1,11 @@
 import { Router } from 'express';
 import { deleteUser, getUserById, getUsers, signIn, signUp, updateUser } from '../controllers/users';
 import { Auth } from '../middlewares/Auth';
+import { prv } from './private';
 
 export const api = Router();
 
+api.use('/prv',Auth,prv);
 //MÉTODOS TESTEADOS DEPURAR
 api.get('/users',getUsers);
 api.get('/user/:id',getUserById);

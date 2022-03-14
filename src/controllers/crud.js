@@ -13,7 +13,8 @@ export const read = async (model,path,fields) => {
         let docs;
         if(!!path && !!fields) docs = await model.find().select(path).populate(fields);
         if(!!path && !fields) docs = await model.find().select(path);
-        if(!path && !!fields) docs = await model.find();
+        if(!path && !!fields) docs = await model.find().populate(fields);
+        if(!path && !fields) docs = await model.find();
         return docs;
     } catch (error) {
         throw error;
@@ -38,7 +39,8 @@ export const readOne = async (param,path,fields,model) => {
         let doc;
         if(!!path && !!fields) doc = await model.findOne(param).select(path).populate(fields);
         if(!!path && !fields) doc = await model.findOne(param).select(path);
-        if(!path && !!fields) doc = await model.findOne(param); 
+        if(!path && !!fields) doc = await model.findOne(param).populate(fields);
+        if(!path && !fields) doc = await model.findOne(param);
         return doc; 
     } catch (error) {
         throw error;
