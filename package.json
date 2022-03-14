@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angeldesweb/crud-auth-temp.git"
+    "url": "git+https://github.com/angeldesweb/bible-api.git"
   },
   "author": "Ángel Zamora <angeldesweb>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angeldesweb/crud-auth-temp/issues"
+    "url": "https://github.com/angeldesweb/bible-api/issues"
   },
-  "homepage": "https://github.com/angeldesweb/crud-auth-temp#readme",
+  "homepage": "https://github.com/angeldesweb/bible-api#readme",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
